@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel='shortcut icon' href='favicon.ico' />
+    <title>Super foruuum</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>Forum devexpresss <img src="mati.png" class="img-thumbnail" width="100px" height="100px"/></h1>
+        <form method="POST">
+            Login:
+            <input type="text" name="name">
+            Wiadomość:
+            <input type="text" name="message" autocomplete="off" width="300px">
+            <button>Send</button>
+        </form>
+
+
+        <ul>
+            {{#messageList}}
+            <li><b>{{name}}:</b>    {{message}}</li>
+            {{/messageList}}
+        </ul>
+
+    </div>
+</body>
+
+</html>
