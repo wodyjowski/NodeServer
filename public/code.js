@@ -1,4 +1,4 @@
-var socket = new WebSocket("ws://" + location.host);
+var socket = new WebSocket("wss://" + location.host);
 
 socket.onopen = function (e) {
     console.log("Connection established");
