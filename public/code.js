@@ -12,8 +12,8 @@ socket.onmessage = function (event) {
 
     var li = document.createElement('li');
     li.innerHTML = "<b>" + data.name +":</b> " + data.message;
-    
-    document.insertBefore(li, list.childNodes[0]);
+
+    list.prepend(li);
 };
 
 socket.onerror = error => {
