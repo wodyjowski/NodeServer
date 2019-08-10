@@ -1,4 +1,4 @@
-var socket = new WebSocket("wss://" + location.host);
+var socket = new WebSocket("ws://" + location.host);
 
 socket.onopen = function (e) {
     console.log("Connection established");
@@ -12,7 +12,8 @@ socket.onmessage = function (event) {
 
     var li = document.createElement('li');
     li.innerHTML = "<b>" + data.name +":</b> " + data.message;
-    list.appendChild(li);
+    
+    document.insertBefore(li, list.childNodes[0]);
 };
 
 socket.onerror = error => {
