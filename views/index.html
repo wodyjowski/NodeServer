@@ -15,22 +15,22 @@
     <div class="container">
 
         <h1>Forum devexpresss <img src="mati.png" class="img-thumbnail" width="100px" height="100px"/></h1>
-        <form method="POST">
+        <form id="messageForm">
             Login:
             <input type="text" name="name">
             Wiadomość:
             <input type="text" name="message" autocomplete="off" width="300px">
-            <button>Send</button>
+            <button type="button" class="btn btn-dark" onclick="sendData()">Send</button>
         </form>
 
 
-        <ul>
+        <ul id="messagesLs">
             {{#messageList}}
             <li><b>{{name}}:</b>    {{message}}</li>
             {{/messageList}}
         </ul>
 
     </div>
+    <script src="code.js"></script>
 </body>
-
 </html>
